@@ -5,7 +5,7 @@ A simple setup to get you started with rails development on docker.
 ## Get Started
 
 - Clone repo.
-- Cd into the repo directory. adocker
+- Cd into the repo directory.
 
 *If you are running docker on linux;*
 
@@ -42,7 +42,7 @@ To link the services and only expose the web app's port to users. I used docker-
 - Run `docker-compose up` to boot up the app.
 - navigate to http://localhost:3000
 
-## Notes.
+## Notes
 
 1. To stop the application:
    `docker-compose down`
@@ -51,3 +51,6 @@ To link the services and only expose the web app's port to users. I used docker-
 3. To rebuild the application:
    `docker-compose up --build`
 
+## Contents
+
+### 1

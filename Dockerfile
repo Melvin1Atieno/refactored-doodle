@@ -6,6 +6,8 @@ RUN apt-get update && apt-get install -y postgresql-client nodejs
 RUN mkdir /myapp
 #Make it the working directory. This basically means the directory into which your commands wiill be run
 WORKDIR /myapp
+ENV GEM_HOME="/usr/local/bundle"
+ENV PATH $GEM_HOME/bin:$GEM_HOME/gems/bin:$PATH
 #Copy the created gemfile with the rails gem which will simply load rails. It will be overwritten by the rails new command
 COPY Gemfile /myapp/Gemfile
 #An empty gemfile lock to build the dockerfile

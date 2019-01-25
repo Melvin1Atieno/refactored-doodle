@@ -18,7 +18,6 @@ COPY . /myapp
 COPY entrypoint.sh /usr/bin/
 #Give container user executable rights.
 RUN chmod +x /usr/bin/entrypoint.sh
-
 ENTRYPOINT ["entrypoint.sh"]
 #expose port
 EXPOSE 3000

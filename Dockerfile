@@ -2,6 +2,8 @@
 FROM ruby:2.5
 #update package database, install postgres(preferred database) and install nodejs a javascript runtime required by rails for [minifica.
 RUN apt-get update && apt-get install -y postgresql-client nodejs
+#change container UID and GID to match that of the host
+USER 1000:1000
 #create a directory into which the app contents will be added
 RUN mkdir /myapp
 #Make it the working directory. This basically means the directory into which your commands wiill be run
@@ -23,7 +25,5 @@ RUN chmod +x /usr/bin/entrypoint.sh
 ENTRYPOINT ["entrypoint.sh"]
 #expose port
 EXPOSE 3000
-#change container UID and GID to match that of the host
-USER 1000:1000
 #Starting up the Web Server
 CMD ["rails", "server", "-b", "0.0.0.0"]

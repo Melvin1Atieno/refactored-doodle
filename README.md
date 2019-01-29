@@ -33,10 +33,10 @@ To generate a new rails project run.
 
 ### Notes
 
-`--user (id -u): (id -g)` -  resolves generated files/folder's ownership to the current user's id and group id respectively. This is to make sure that the files generated are owned by current user and not the default container user.
-`--force` - overwrite conflicting files.
-`--database=postgresql` - Configure rails to use postgresql instead of the default sqlite
-`-B` - skip bundle install, it's time consuming.
+- `--user (id -u): (id -g)` -  resolves generated files/folder's ownership to the current user's id and group id respectively. This is to make sure that the files generated are owned by current user and not the default container user.  
+- `--force` - overwrite conflicting files.  
+- `--database=postgresql` - Configure rails to use postgresql instead of the default sqlite.  
+- `-B` - skip bundle install, it's time consuming.
 
 
 Rails expects a database to be running on `localhost`, you'll need to point it to the `db` container instead. You'll also need to change the database and username to align with the defaults set by the `postgres` image which we used to build the database container.

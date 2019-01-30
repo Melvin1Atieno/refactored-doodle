@@ -70,7 +70,7 @@ ActiveRecord: NoDatabaseError?
 Create the database.
 In a different terminal;
 
-- Run `docker-compose exec app rails db:create`
+- Run `docker-compose exec web rails db:create`
 
 ## Cheat sheet.
 
